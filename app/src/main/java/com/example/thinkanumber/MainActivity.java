@@ -79,6 +79,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void dobas(){
+
         elsoKockaErteke=(int)(Math.random() * 6) + 1;
         dobasok=elsoKockaErteke+"";
         melyikKep(elsoKockaErteke,kocka1);
@@ -116,11 +117,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void uj(){
+        osszeg=0;
+        megjelenitettKockakSzama=0;
+        elsoKockaErteke=0;
+        masodikKockaErteke=0;
         eredmeny.setText("");
+        eredmenyek="";
+        dobasok="";
         kocka1.setImageResource(R.drawable.kocka1);
         kocka2.setImageResource(R.drawable.kocka1);
         kocka2.setVisibility(View.VISIBLE);
-        osszeg=0;
+
     }
 
     private void init(){
@@ -132,6 +139,12 @@ public class MainActivity extends AppCompatActivity {
         kocka1=findViewById(R.id.kepKocka1);
         kocka2=findViewById(R.id.kepKocka2);
         osszeg=0;
+        megjelenitettKockakSzama=0;
+        elsoKockaErteke=0;
+        masodikKockaErteke=0;
+        dobasok="";
+        eredmenyek="";
+
 
     }
 }
